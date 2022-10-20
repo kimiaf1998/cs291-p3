@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   def index
     @users = User.all
-    @posts = Post.all
+  end
+
+
+  def show
+    @user = User.find_by_id(params[:id]) or not_found
   end
 end
