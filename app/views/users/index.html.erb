@@ -1,0 +1,37 @@
+<h1>Users</h1>
+
+
+<div>
+
+  <div id="user_list">
+    <ul>
+      <% @users.each do |user| %>
+      <li>
+        <%= user.name %>
+        <%= user.user_name %>
+        <%= user.email %>
+
+        <div class="user_posts">
+          <%
+            user_post = user.post
+            user_post.each do |post|%>
+            <div>
+              <%= post.title %>
+            </div>
+            <div class="user_comments">
+              <%
+                post_comment = post.comment
+                post_comment.each do |comment|%>
+                <div>
+                  <%= comment.body %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>
