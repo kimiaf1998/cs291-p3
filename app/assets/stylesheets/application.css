@@ -18,9 +18,8 @@
     border:1px solid #012e85;
 }
 
-#user-info{
-    /*background-color: #666666;*/
-    padding-top: 2%;
+#user-info {
+    padding-top: 1%;
     display: flex;
     /*align-items: center;*/
     justify-content: center;
@@ -39,7 +38,7 @@
 }
 
 .title{
-
+    padding-top: 1%;
     text-align: center;
 }
 
@@ -49,4 +48,17 @@ ul{
 
 .inline-div{
     display: inline;
+}
+
+#post-info {
+    padding-top: 1%;
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+}
+
+#post-info table{
+    width: 80%;
+    background-color: #b4f56f;
+    text-align: center;
 }
