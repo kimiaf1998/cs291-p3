@@ -9,3 +9,4 @@
 User.create(name: "Rob Blue", email: "rob.pj@example.com", user_name: "Rob_Blue").save!
 User.create(name: "William Xu", email: "willi.pj@example.com", user_name: "WilliamXu").save!
 
+
