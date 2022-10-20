@@ -62,3 +62,9 @@ ul{
     background-color: #b4f56f;
     text-align: center;
 }
+
+.edit-button{
+    background-color: orange;
+    border: none;
+    padding: 7px 15px;
+}
