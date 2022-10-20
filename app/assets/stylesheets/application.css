@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+
+#user-info table, th, td {
+    border:1px solid #012e85;
+}
+
+#user-info{
+    /*background-color: #666666;*/
+    padding-top: 2%;
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+}
+
+#user-info table{
+    width: 80%;
+    background-color: #6fd1f5;
+    text-align: center;
+}
+
+#user-info th, td{
+    width: 30%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.title{
+
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.inline-div{
+    display: inline;
+}
