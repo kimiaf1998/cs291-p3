@@ -89,3 +89,11 @@ ul{
     border: none;
     /*background-color: #561212;*/
 }
+
+.text-center{
+    text-align: center;
+}
+
+.index-page-title{
+    color: #4f0d8c;
+}
