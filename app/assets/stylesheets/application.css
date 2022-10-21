@@ -74,3 +74,8 @@ ul{
     border: none;
     padding: 7px 10px;
 }
+
+.error_msg{
+    color: red;
+
+}
