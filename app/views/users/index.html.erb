@@ -7,7 +7,7 @@
     <ul>
       <% @users.each do |user| %>
       <li>
-        <h2><%= user.user_name %></h2>
+        <h2><a href='/users/<%= user.id %>' ><%= user.user_name %></a></h2>
         <%= user.name %>
         <%= user.email %>
 
