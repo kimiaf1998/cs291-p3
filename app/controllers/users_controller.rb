@@ -31,13 +31,13 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to @user
     else
-      render :update, status: :unprocessable_entity
+      render :edit, status: :unprocessable_entity
 
     end
   end
 
   def destroy
-    logger.info "Processing the request... "
+    # logger.info "Processing the request... "
     @user = User.find(params[:id])
     @user.destroy
 

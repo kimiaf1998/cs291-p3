@@ -4,7 +4,7 @@
     <%= form.label :name %><br>
     <%= form.text_field :name %>
     <% @user.errors.full_messages_for(:name).each do |message| %>
-          <div><%= message %></div>
+          <div class="error_msg"><%= message %></div><br>
     <% end %>
   </div>
 
@@ -12,7 +12,7 @@
     <%= form.label :email %><br>
     <%= form.text_field :email %>
     <% @user.errors.full_messages_for(:email).each do |message| %>
-          <div><%= message %></div>
+          <div class="error_msg"><%= message %></div><br>
     <% end %>
   </div>
 
@@ -20,7 +20,7 @@
     <%= form.label :user_name %><br>
     <%= form.text_field :user_name %>
     <% @user.errors.full_messages_for(:user_name).each do |message| %>
-          <div><%= message %></div>
+          <div class="error_msg"><%= message %></div><br>
     <% end %>
   </div>
 
