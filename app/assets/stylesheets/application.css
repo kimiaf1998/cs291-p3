@@ -68,3 +68,9 @@ ul{
     border: none;
     padding: 7px 15px;
 }
+
+.delete-button{
+    background-color: red;
+    border: none;
+    padding: 7px 10px;
+}

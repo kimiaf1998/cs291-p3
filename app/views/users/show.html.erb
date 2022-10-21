@@ -13,7 +13,12 @@
         <td><%= @user.name %></td>
         <td><%= @user.user_name %></td>
         <td><%= @user.email %></td>
-        <td><button class="edit-button"><%= link_to  "Edit", edit_user_path %></button></td>
+        <td>
+          <button class="edit-button"><%= link_to  "Edit", edit_user_path %></button>
+          <button class="delete-button"><%= link_to  "Delete", user_path, data: {
+            turbo_method: :delete,
+            turbo_confirm: "Are you sure?"} %></button>
+        </td>
       </tr>
     </table>
   </div>

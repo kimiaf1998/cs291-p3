@@ -37,6 +37,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    logger.info "Processing the request... "
     @user = User.find(params[:id])
     @user.destroy
 
