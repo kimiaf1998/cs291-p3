@@ -22,3 +22,11 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+DELETE Operation:
+
+if destroy doesn't work for you,try running command bellow:
+
+$ rails importmap:install $ rails turbo:install stimulus:install
+
