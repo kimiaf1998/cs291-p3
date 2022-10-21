@@ -32,7 +32,7 @@
 }
 
 #user-info th, td{
-    width: 30%;
+    width: 25%;
     padding-top: 1%;
     padding-bottom: 1%;
 }
@@ -78,4 +78,9 @@ ul{
 .error_msg{
     color: red;
 
+}
+
+show-button{
+
+    color: greenyellow;
 }

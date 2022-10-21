@@ -1,41 +1,108 @@
 <h1>Users</h1>
 
 
-<div>
+<!--<div>-->
 
-  <div id="user_list">
-    <ul>
-      <% @users.each do |user| %>
-      <li>
-        <%= user.name %>
-        <%= user.user_name %>
-        <%= user.email %>
+<!--  <div id="user_list">-->
+<!--    <ul>-->
+<%# @users.each do |user| %>
+<!--      <li>-->
+<%#= user.name %>
+<%#= user.user_name %>
+<%#= user.email %>
 
 <!--        We need to link each user to their page using link_to tag ###-->
 <!--        We need to create add button then redirect to the new page-->
-        <%#= link_to "Add User", new_user_path %>
+<%#= link_to "Add User", new_user_path %>
 
-        <div class="user_posts">
-          <%
-            user_post = user.post
+<!--        <div class="user_posts">-->
+<%#
+<!--            user_post = user.post-->
             user_post.each do |post|%>
-            <div>
-              <%= post.title %>
-            </div>
-            <div class="user_comments">
-              <%
-                post_comment = post.comment
+<!--            <div>-->
+<%#= post.title %>
+<!--            </div>-->
+<!--            <div class="user_comments">-->
+<%#
+<!--                post_comment = post.comment-->
                 post_comment.each do |comment|%>
-                <div>
-                  <%= comment.body %>
-                </div>
-              <% end %>
-            </div>
-          <% end %>
-        </div>
-      </li>
-      <% end %>
-    </ul>
-  </div>
+<!--                <div>-->
+<%#= comment.body %>
+<!--                </div>-->
+<%# end %>
+<!--            </div>-->
+<%# end %>
+<!--        </div>-->
+<!--      </li>-->
+<%# end %>
+<!--    </ul>-->
+<!--  </div>-->
 
-</div>
+<!--</div>-->
+
+
+
+<div class="users_list">
+  <% @users.each do |user| %>
+
+    <div id="user-info">
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>User Name</th>
+          <th>Email</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.user_name %></td>
+          <td><%= user.email %></td>
+          <td>
+            <button class="show-button"><%= link_to  "Details", user %></button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    </div>
+
+    <div class="title">
+<!--      <h3>Posts</h3>-->
+<!--      <div id="post-info">-->
+<!--        <table>-->
+<!--          <tr>-->
+<!--            <th>Title</th>-->
+<!--            <th>Body</th>-->
+<!--            <th>Comments</th>-->
+<!--          </tr>-->
+
+          <%#
+<!--            user_posts = user.post-->
+<!--            user_posts.each do |post|-->
+<!--              post_comments = post.comment-->
+          %>
+<!--            <tr>-->
+
+<!--              <td><%#= post.title %></td>-->
+<!--              <td><%#= post.body %></td>-->
+
+<!--              <td>-->
+<!--                <ul>-->
+                  <%# post_comments.each do |comment| %>
+<!--                    <li>-->
+<!--                      <h5 class="inline-div">-->
+                        <%#= comment.user.user_name + ":" %>
+<!--                      </h5>-->
+<!--                      <di>-->
+                        <%#= comment.body %>
+<!--                      </di>-->
+<!--                    </li>-->
+<!--                    <br>-->
+                  <%# end %>
+<!--                </ul>-->
+<!--              </td>-->
+<!--            </tr>-->
+          <%# end %>
+<!--        </table>-->
+<!--      </div>-->
+  <% end %>
+  </div>
