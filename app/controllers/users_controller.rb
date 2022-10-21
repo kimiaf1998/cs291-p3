@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id]) or not_found
+    @user = User.find_by_id(params[:id]) or not_found
   end
 
   def new
