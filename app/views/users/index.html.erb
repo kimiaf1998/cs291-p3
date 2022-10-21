@@ -7,8 +7,8 @@
     <ul>
       <% @users.each do |user| %>
       <li>
+        <h2><%= user.user_name %></h2>
         <%= user.name %>
-        <%= user.user_name %>
         <%= user.email %>
 
         <div class="user_posts">
@@ -16,14 +16,19 @@
             user_post = user.post
             user_post.each do |post|%>
             <div>
-              <%= post.title %>
+              <h3><%= post.title %></h3>
+              <p><%= post.body %></p>
             </div>
             <div class="user_comments">
               <%
                 post_comment = post.comment
                 post_comment.each do |comment|%>
-                <div>
-                  <%= comment.body %>
+
+                <div class="comment">
+                  <div><%= comment.user.user_name %></div>
+                  <div>
+                    <%= comment.body %>
+                  </div>
                 </div>
               <% end %>
             </div>
