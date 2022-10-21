@@ -2,9 +2,9 @@ class User < ApplicationRecord
   has_many :post
   has_many :comment
 
-  validates :name, presence: true, format: { with: /\A^[a-zA-Z]+$\z/, message: "Invalid Name"}
+  validates :name, presence: true
   validates :user_name, presence: true, length: { minimum: 10 }
-  validates :email, presence: true, format: { with: /\A^(.+)@(.+)$\z/, message: "Invalid Email Address"  },
+  validates :email, presence: true, format: { with: /^(.+)@(.+)$/, message: "Email invalid"  },
             uniqueness: { case_sensitive: false },
             length: { minimum: 4, maximum: 254 }
 
