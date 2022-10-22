@@ -27,8 +27,13 @@
 
 #user-info table{
     width: 80%;
-    background-color: #6fd1f5;
+    background-color: rgba(111, 209, 245, 0.57);
     text-align: center;
+}
+
+#user-info th{
+    background-color: #2160da;
+    color: navajowhite;
 }
 
 #user-info th, td{
@@ -80,7 +85,15 @@ ul{
 
 }
 
-show-button{
+.show-button{
+    border: none;
+    /*background-color: #561212;*/
+}
 
-    color: greenyellow;
+.text-center{
+    text-align: center;
+}
+
+.index-page-title{
+    color: #4f0d8c;
 }
