@@ -87,7 +87,14 @@ ul{
 
 .show-button{
     border: none;
-    /*background-color: #561212;*/
+    background-color: #f3ae45;
+    padding: 7px 10px;
+}
+
+.add-button{
+    border: none;
+    background-color: #bafd31;
+    padding: 7px 10px;
 }
 
 .text-center{
@@ -96,4 +103,9 @@ ul{
 
 .index-page-title{
     color: #4f0d8c;
+}
+
+.content_center{
+    display: flex;
+    justify-content: center;
 }
