@@ -40,6 +40,10 @@ Photo via
 
 post4.save
 
+post5 = Post.create(title: "Hello world!", body: "I am testing this brand new social media platform.", user: user1)
+post5.save
+
+
 # Post.create(title: "Today's Weather", body: "Coast-To-Coast Temperature Flip Expected From Pattern Change", user: 1)
 # Comment.create(body: "Nice!", post:post1 ,user: user)
 # post1.save!
@@ -59,11 +63,11 @@ comments5.save!
 comments6 = Comment.create(body: "Cloud computing is very popular nowadays and it's my research area too.", post:post2 ,user: user1)
 comments6.save!
 
-
+comments7 = Comment.create(body: "Nice!", post:post5 ,user: user5)
+comments7.save!
 
 
 # user11 = User.find(11)
 #
 # comments1 = Comment.create(body: "Interesting! Cloud computing is my research area.", post:post2 ,user: user11)
 # comments1.save!
-
