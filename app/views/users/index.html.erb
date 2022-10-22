@@ -1,5 +1,9 @@
 <h1 class="text-center index-page-title">Users</h1>
 
+<div class="content_center">
+  <button class="add-button"><%= link_to "Add", new_user_path %></button>
+</div>
+
 <div class="users_list">
   <div id="user-info">
     <table>
@@ -17,6 +21,9 @@
           <td><%= user.email %></td>
           <td>
             <button class="show-button"><%= link_to  "Details", user %></button>
+            <button class="delete-button"><%= link_to  "Delete", user, data: {
+              turbo_method: :delete,
+              turbo_confirm: "Are you sure?"} %></button>
           </td>
         </tr>
       <% end %>
