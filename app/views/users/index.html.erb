@@ -5,28 +5,70 @@
 </div>
 
 <div class="users_list">
-  <div id="user-info">
-    <table>
-
-      <tr>
-        <th>Name</th>
-        <th>User Name</th>
-        <th>Email</th>
-        <th></th>
-      </tr>
       <% @users.each do |user| %>
-        <tr>
-          <td><%= user.name %></td>
-          <td><%= user.user_name %></td>
-          <td><%= user.email %></td>
-          <td>
-            <button class="show-button"><%= link_to  "Details", user %></button>
-            <button class="delete-button"><%= link_to  "Delete", user, data: {
-              turbo_method: :delete,
-              turbo_confirm: "Are you sure?"} %></button>
-          </td>
-        </tr>
+
+        <div class="title">
+          <div id="user-info">
+            <table>
+              <tr>
+                <th>Name</th>
+                <th>User Name</th>
+                <th>Email</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td><%= user.name %></td>
+                <td><%= user.user_name %></td>
+                <td><%= user.email %></td>
+                <td>
+                  <button class="edit-button"><%= link_to  "Edit", edit_user_path(user) %></button>
+                  <button class="delete-button"><%= link_to  "Delete", user, data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"} %></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="title">
+          <div id="post-info">
+            <table>
+              <tr>
+                <th>Title</th>
+                <th>Body</th>
+                <th>Comments</th>
+              </tr>
+
+              <%
+                user_posts = user.post
+                user_posts.each do |post|
+                  post_comments = post.comment
+              %>
+                <tr>
+
+                  <td><%= post.title %></td>
+                  <td><%= post.body %></td>
+
+                  <td>
+                    <ul>
+                      <% post_comments.each do |comment| %>
+                        <li>
+                          <h5 class="inline-div">
+                            <%= comment.user.user_name + ":" %>
+                          </h5>
+                          <di>
+                            <%= comment.body %>
+                          </di>
+                        </li>
+                        <br>
+                      <% end %>
+                    </ul>
+                  </td>
+                </tr>
+              <% end %>
+            </table>
+          </div>
+        </div>
       <% end %>
-    </table>
-  </div>
 </div>
